@@ -16,7 +16,6 @@ def zero(host):
     for i in range(N):
         for j in range(N):
             if bingo[i][j] == host:
-                print("체크",i,j)
                 bingo[i][j] = 0
                 return 
 
@@ -63,17 +62,18 @@ bingo = []
 #     for j in range(N):
 #         bingo[i][j] = int(input())
 bingo = [list(map(int, input().split()))for _ in range(N)] # 5*5를 만듦
-#host = []
+host = []
 
-#for i in range(N):
-    #host += list(map(int, input().split()))
-
-for i in range(25):
-    host = int(input())
-    zero(host)
+for i in range(N):
+    host += list(map(int, input().split()))
+sum = 0
+for i in host:
+    #host = int(input())
+    zero(i)
+    sum += 1
     if check() == True: 
         #0부터 시작하기때문에 몇번째인지 아려면 1더해줘야함 아니면 range를 1부터 시작해도될듯
-        sum = i+1
+        
         break
         
 print(sum)
