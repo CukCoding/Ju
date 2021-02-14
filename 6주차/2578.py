@@ -6,10 +6,6 @@
 #한 라인을 다 더 했을때 0이라면 그것은 1빙고가 된 셈이다.
 #저것부터 해서 처음부터 다시 짜야할듯
 
-# V = [0] * N #가로 체크
-# H = [0] * N # 세로 체크
-# cross = 0 #대각선 체크
-# cross2 = 0 #역대각선 체크
 N=5
 
 def zero(host):
@@ -56,19 +52,18 @@ def check():
     else:
         return False
     
-
-bingo = []
-# for i in range(N):
-#     for j in range(N):
-#         bingo[i][j] = int(input())
-bingo = [list(map(int, input().split()))for _ in range(N)] # 5*5를 만듦
 host = []
+bingo = []
+
+bingo = [list(map(int, input().split()))for _ in range(N)] # 5*5를 만듦
+
 
 for i in range(N):
-    host += list(map(int, input().split()))
+    host += list(map(int, input().split())) #런타임 오류때문에 입력방식 바꿈
+
 sum = 0
+
 for i in host:
-    #host = int(input())
     zero(i)
     sum += 1
     if check() == True: 
