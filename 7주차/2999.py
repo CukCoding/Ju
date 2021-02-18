@@ -20,7 +20,6 @@ for i in range(1,len(N)):
     
 
 arr = [ [0] * C for _ in range(R)] # 2차원 배열 초기화
-print(R,C,arr)
 
 for i in range(C): 
     for j in range(R): # 
