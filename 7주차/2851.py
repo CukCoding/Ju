@@ -13,8 +13,10 @@ for i in range(10):
 for i in range(10):
     sum[i] = sum[i-1] + arr[i]
     if sum[i] >= 100:
-        if sum[i] - 100 >= 100 - sum[i-1]:
+        if sum[i] - 100 > 100 - sum[i-1]:
             print(sum[i-1])
+            if sum[i] - 100 == 100 - sum[i-1]:
+                print(sum[i])
         else:
             print(sum[i])
         break
