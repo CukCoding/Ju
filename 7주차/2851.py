@@ -20,9 +20,9 @@ for i in range(10):
             print(sum[i-1]) # 현재값에서 100을 뺸값이 더 크다는것은 과거값이 100에 더 근접하다는 의미이다.
             break
         else:
-            print(sum[i])
+            print(sum[i]) #현재값에서 100을 뺸값이 더 작다는것은 현재값이 100에 더 근접하다는 의미이다.
             break
-    if i == 9 and sum[i] < 100:
+    if i == 9 and sum[i] < 100: # for문이 다 돌고난뒤에도 sum[i]의 값이 100보다 작을때는 그냥 sum[i]를 출력한다.
         print(sum[i])
 
 # for i in range(10):
