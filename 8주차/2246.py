@@ -5,9 +5,13 @@ N = int(input())
 
 arr =[[0] * 2 for _ in range(N) ]
 
+# for i in range(N):
+#     for j in range(2):
+#         arr[i][j] = list(map(int,input().split()))
 for i in range(N):
-    for j in range(2):
-        arr[i][j] = int(input())
+    arr[i] = list(map(int,input().split()))
+
+print(arr)
 
 count = 0
 
