@@ -50,10 +50,13 @@
 # 메모이제이션된 배열을 기억할수가없다. 
 # append함수로 배열에 입력을 받을경우 O(1)로 가장빠르다.
 
+import sys
+input = sys.stdin.readline
 
 N = int(input())
 arr = []
 dp = []
+
 for _ in range(N):
   arr.append(int(input()))
 
@@ -65,3 +68,4 @@ for i in range(3,N): #0,1,2번째는 미리 입력했으므로 3번째배열부�
   dp.append(max(dp[i-2]+arr[i], dp[i-3]+arr[i]+arr[i-1])) 
 
 print(dp[N-1])
+
