@@ -6,6 +6,7 @@
 
 count = 1
 while True:
+    #L = 휴가일, P = 캠핑일 , L = 사용가능일
     L, P, V = map(int, input().split())
     if L == P == V == 0: 
         break # 0 0 0입력시 종료
