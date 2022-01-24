@@ -1,5 +1,4 @@
 strInput = input().split('-')
-
 sum = 0
 for i in strInput[0].split('+'): # 첫번쨰- 가 나오기전까지의 수를 모두 더한것
     sum += int(i)
