@@ -8,9 +8,15 @@ num = 0
 result = []
 
 for i in range(N):
-    for j in range(1,K):
-        num = queue.popleft()
-        queue.append(num)
+    for j in range(K-1):
+        queue.append(queue.popleft())
     result.append(queue.popleft())
 
-print(result)
+cnt = 1
+print('<', end="")
+for i in result:
+    print(i,end="")
+    if cnt != len(result):
+        print(', ',end="")
+    cnt +=1 
+print('>')
